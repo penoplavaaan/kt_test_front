@@ -6,7 +6,7 @@ class ProductDataService {
   }
 
   create(data) {
-    return http.post("/products", data);
+    return http.post("/api/upload", data );
   }
 
   delete(id) {

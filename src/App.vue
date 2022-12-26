@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar app dark >
 
-      <v-btn to="/tutorials" text>
+      <v-btn to="/products" text>
         Товары
       </v-btn>
 
