@@ -108,7 +108,17 @@ export default {
       categories: []
     };
   },
+  created() {
+    this.retrieveProducts()
+    this.timer = setInterval(this.retrieveProducts, 15000);
+  },
+  destroyed () {
+    this.cancelAutoUpdate();
+  },
   methods: {
+    cancelAutoUpdate () {
+      clearInterval(this.timer);
+    },
     getColor(weight){
       return weight < 1000 ? 'red': 'green'
     },
@@ -176,6 +186,7 @@ export default {
       this.category = category
 
       this.retrieveProducts();
+      this.page = 1;
     },
 
     handleFilter() {

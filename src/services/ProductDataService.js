@@ -9,12 +9,8 @@ class ProductDataService {
     return http.post("/upload", data );
   }
 
-  delete(id) {
-    return http.delete(`/products/${id}`);
-  }
-
-  deleteAll() {
-    return http.delete(`/products`);
+  getUnprocessedTasks(){
+    return http.get('/upload-tasks-count');
   }
 }
 

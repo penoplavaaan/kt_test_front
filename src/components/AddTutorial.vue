@@ -1,6 +1,6 @@
 <template>
   <div class="submit-form mt-3 mx-auto">
-    <p class="headline">Загрузить новые продукты</p>
+    <p class="headline">Загрузить новые товары</p>
 
     <div v-if="!submitted">
       <v-form ref="form" lazy-validation>
@@ -11,17 +11,18 @@
         />
       </v-form>
 
-      <v-btn color="primary" class="mt-3" @click="saveTutorial">Submit</v-btn>
+      <v-btn color="primary" class="mt-3" @click="saveTutorial">Загрузить</v-btn>
     </div>
 
     <div v-else>
       <v-card class="mx-auto">
         <v-card-title>
-          Успех!
+          Загрузка началась!
         </v-card-title>
 
         <v-card-subtitle>
-          Повторим?)
+          <p>Она будет происходить на фоне и может занять продолжительное время.</p>
+          <p>Рекомендуем запастись терпением, кофе и печеньками.</p>
         </v-card-subtitle>
 
         <v-card-actions>
