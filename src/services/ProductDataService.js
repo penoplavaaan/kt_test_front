@@ -12,6 +12,16 @@ class ProductDataService {
   getUnprocessedTasks(){
     return http.get('/upload-tasks-count');
   }
+
+  getStatistics(){
+    return http.get('/products/statistics');
+  }
+
+  downloadReport(){
+    return http.get('/products/statistics/download', {
+      responseType: 'blob',
+    });
+  }
 }
 
 export default new ProductDataService();

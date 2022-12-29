@@ -16,6 +16,11 @@ export default new Router({
       path: "/add",
       name: "add",
       component: () => import("./components/AddTutorial")
+    },
+    {
+      path: "/statistics",
+      name: "statistics",
+      component: () => import("./components/ShowStatistics.vue")
     }
   ]
 });

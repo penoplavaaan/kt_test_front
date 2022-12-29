@@ -10,6 +10,10 @@
         Добавить
       </v-btn>
 
+      <v-btn to="/statistics" text>
+        Статистика
+      </v-btn>
+
       <v-banner>
         Задач в очереди на обработку: {{filesInQueue}}
         <span v-if="filesInQueue === 0">. Будьте внимательны: возможно, товары все еще добавляются.</span>
@@ -49,6 +53,9 @@ export default {
           .catch((e) => {
             console.log(e);
           });
+    },
+    cancelAutoUpdate () {
+      clearInterval(this.timer);
     },
   }
 };
