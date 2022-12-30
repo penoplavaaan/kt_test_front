@@ -1,27 +1,31 @@
 import http from "../http-common";
 
 class ProductDataService {
-  getAll(params) {
-    return http.get("/products", { params });
-  }
+    getAll(params) {
+        return http.get("/products", {params});
+    }
 
-  create(data) {
-    return http.post("/upload", data );
-  }
+    create(data) {
+        return http.post("/upload", data, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        });
+    }
 
-  getUnprocessedTasks(){
-    return http.get('/upload-tasks-count');
-  }
+    getUnprocessedTasks() {
+        return http.get('/upload-tasks-count');
+    }
 
-  getStatistics(){
-    return http.get('/products/statistics');
-  }
+    getStatistics() {
+        return http.get('/products/statistics');
+    }
 
-  downloadReport(){
-    return http.get('/products/statistics/download', {
-      responseType: 'blob',
-    });
-  }
+    downloadReport() {
+        return http.get('/products/statistics/download', {
+            responseType: 'blob',
+        });
+    }
 }
 
 export default new ProductDataService();
