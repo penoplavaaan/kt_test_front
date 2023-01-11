@@ -72,7 +72,7 @@ export default {
             this.mostPopularCategories = data.mostPopularCategories
             this.totalProductsWeightKg = Math.round(data.totalProductsWeightKg * 100) / 100
             this.totalProductCount = data.totalProductCount
-            this.avgProductsWeightKg = Math.round(data.avgProductsWeightKg * 100) / 100
+            this.avgProductsWeightKg = Math.round(data.avgProductsWeight * 100) / 100
             this.totalCategoriesCount = data.totalCategoriesCount
             this.leastPopularCategories = data.leastPopularCategories
 
